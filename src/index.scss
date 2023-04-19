@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,500&display=swap');
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.icon {
+  width: auto;
+  height: 5%;
+}
+.item-img {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  // border: 1px solid #333;
+  position: relative;
+  
+}
+.item-img img {
+  position: absolute;
+  object-fit: cover;
+  width: 70%;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+
+  
+  &:hover {
+    width: 80%;
+  }
+}
+.item-img .active {
+  border: 0.5px solid #c4c2c2;
+}
+.main-img {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.is-form {
+  overflow: hidden;
+  position: relative;
+  background-color: #f9f9f9;
+  text-shadow: 1px 1px 1px #fff;
+  color: #666;
+  border: 1px solid #ddd;
+  text-transform: none;
+  font-weight: normal;
+  width: 2.5vw;
+  height: 1.5vw;
+  
+}
+.quantity input[type="number"] {
+  
+  max-width: 4.5vw;
+  width: 4.5vw;
+  text-align: center;
+  border-radius: 0 !important;
+  font-size: 1vw;
+  font-weight: 700;
+
+}
+.quantity input {
+  padding-left: 0;
+  padding-right: 0;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.add {
+  background-color: #d26e4b;
+  border-color: rgba(0,0,0,0.05);
+  color: #fff;
+  font-size: 1vw;
+  font-weight: 600;
+  padding: 0.5vw;
+}
+.item-img.active {
+  border: 1px solid #333;
+}
+
+
+/* Reset css */
+* {
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+  list-style-type: none;
+}
+
+ul {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+/* End reset css */
+//
+//
+//
+//
+//
+//
+/* ********************** Table wrap ********************** */
+.table-wrap {
+  color: #333;
+  font-size: 14px;
+}
+/* ********************** End table wrap ********************** */
+
+/* ********************** Table common ********************** */
+table {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 2px 3px 0 rgb(0 0 0 / 0.15), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+
+
+  thead {
+    th {
+      text-align: left;
+      padding-block: 8px;
+      border-top: 1px solid #f0f0f0;
+      border-bottom: 1px solid #ececec;
+      
+    }
+  }
+
+  tbody {
+     tr:not(:last-child) td {
+      border-bottom: 1px solid #ececec;
+    }
+  }
+
+  th{
+    padding: 16px;
+    font-weight: 700;
+    font-size: 1vw;
+
+  }
+  td {
+    padding: 16px;
+    font-weight: 600;
+    font-size: 1vw;
+    align-items: center;
+
+  }
+
+  td {
+    vertical-align: middle;
+  }
+}
+
+.cover {
+  margin: 0;
+}
+
+.total-quantity {
+  border-bottom: 3px solid #ececec;
+}
+/* ********************** End table common ********************** */
+
+
+:root {
+  --btn-gradient: linear-gradient(to right top, #fc6c8f, #ffb86c);
+}
+
+.bt-button-1,.bt-button-2 {
+  width: 100%;
+  display: inline-block;
+  padding: 16px 40px;
+  font-size: 1.125rem /* 18px */;
+  line-height: 1.75rem /* 28px */;
+  background-image: var(--btn-gradient);
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  &:hover::before {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: #fff;
+    opacity: 0.1;
+    z-index: -1;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+}
+
+.fui-basic-input {
+  .input-cart {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid rgb(156 163 175);
+    transition: linear 0.2s;
+    &::-webkit-input-placeholder {
+      color: rgb(156 163 175);
+    }
+    &::-moz-input-placeholder {
+      color: rgb(156 163 175);
+    }
+    &:focus {
+      border-color: #1dc071;
+      box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+  }
+}
