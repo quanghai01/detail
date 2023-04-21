@@ -1,9 +1,8 @@
-import Slider from "react-slick"
-import Detail from "./layouts/detail/Detail"
-import DetailPage from "./layouts/detail/DetailPage"
-import TableProduct from "./layouts/cart/TableProduct"
-import DetailCart from "./layouts/cart/DetailCart"
-import Cart from "./layouts/cart/Cart"
+import Header from "./layouts/header/Header"
+import Navbar from "./layouts/header/Navbar"
+import ListProduct from "./layouts/home/ListProduct"
+import Product from "./layouts/home/Product"
+
 
 
 
@@ -13,8 +12,10 @@ function App() {
 
   return (
     <div className="App">
-    {/* <DetailPage></DetailPage> */}
-    <Cart></Cart>
+<Header></Header>
+      <Navbar></Navbar>
+
+      <ListProduct></ListProduct>
     </div>
   )
 }
