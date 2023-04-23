@@ -19,7 +19,7 @@ const DetailCart = () => {
 
       <div className="bt-button-1">Tiến hành thanh toán</div>
 
-      <div class="fui-basic-input">
+      <div className="fui-basic-input">
         <input
           type="text"
           name="name"
