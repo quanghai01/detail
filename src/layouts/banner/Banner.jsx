@@ -1,9 +1,9 @@
 import React, { useState, useRef } from "react";
 import Slider from "react-slick";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Back from "../../assets/icons/Back";
 import Next from "../../assets/icons/Next";
-
-
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -14,7 +14,7 @@ const settings = {
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplay:true,
+  autoplay: true,
   autoplaySpeed: 3000,
 };
 
@@ -41,8 +41,10 @@ const Banner = () => {
       <Slider {...settings} ref={sliderRef}>
         <div className="slider1 slider-all">
           <div className="div_descript-slide relative">
-           
-            <div className="descript-slider absolute ">
+            <div
+              className="descript-slider absolute "
+        
+            >
               <h3 className="text-[30px] font-bold">Simple 1</h3>
               <h2 className="text-[45px] font-bold  py-[15px]">
                 Example Classiso
@@ -58,7 +60,10 @@ const Banner = () => {
         </div>
         <div className="slider2 slider-all">
           <div className="div_descript-slide relative">
-            <div className="descript-slider absolute ">
+            <div
+              className="descript-slider absolute "
+          
+            >
               <h3 className="text-[30px] font-bold">Simple 2</h3>
               <h2 className="text-[45px] font-bold  py-[15px]">
                 Example Classiso 2

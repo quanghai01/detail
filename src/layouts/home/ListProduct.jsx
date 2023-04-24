@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Product from "./Product";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const products1 = [
   {
     id: 1,
@@ -128,6 +129,11 @@ const cates = [
   },
 ];
 const ListProduct = () => {
+  useEffect(() => {
+    AOS.init({
+      // Cấu hình AOS ở đây
+    });
+  }, []);
   const [cateId, setCateId] = useState(1);
   const [products,setProducts] = useState(products1)
   const handleClick = (id) => {
@@ -142,7 +148,7 @@ const ListProduct = () => {
   console.log("mount",cateId)
   return (
     <div className="flex flex-col flex-wrap wrapper">
-      <ul className="list-cate flex flex-row font-bold py-[1vw] px-[1%]">
+      <ul data-aos="fade-right" data-aos-duration="1000" className="list-cate flex flex-row font-bold py-[1vw] px-[1%]">
         {cates.map((cate) => (
           <li key={cate.id} className={`tab mr-[1.5vw] ${cate.id == cateId ? "active" : ""} cursor-pointer`}>
             <a onClick={() => handleClick(cate.id)}>
@@ -151,7 +157,7 @@ const ListProduct = () => {
           </li>
         ))}
       </ul>
-      <div className="all-product flex flex-row flex-wrap  wrapper">
+      <div className="all-product flex flex-row flex-wrap  wrapper "  data-aos="fade-left" data-aos-duration="1000">
         <div className="all-product-1 flex flex-row flex-wrap ">
           {products.map((product,index) => (
             <Product key={index} product={product}></Product>
